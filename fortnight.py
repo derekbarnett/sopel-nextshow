@@ -61,9 +61,6 @@ def fortnight(sopel, input):
         iresult = "/dev/random"
 
     sopel.reply("It is " + iresult + "\'s weekend.")
-#@fortnight.commands = ['fortnight', 'f']
-#@fortnight.example = '.f YYYY/MM/DD, or simply .f to see if it is a KPO or /dev/random weekend'
-
 
 if __name__ == '__main__':
     print(__doc__.strip())

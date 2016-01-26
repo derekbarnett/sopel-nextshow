@@ -15,7 +15,6 @@ hosts a show on the first and third friday of the month.
 import datetime, re
 from sopel.module import commands, example
 
-
 #ATTENTION - change schedule to the type of schedule appropriate
 #            to the event you are using this to track.
 #Valid options are:
@@ -28,8 +27,7 @@ from sopel.module import commands, example
 schedule = 1
 
 @commands('nextshow', 'ns')
-#example('.ns YYYY/MM/DD, or simply .ns to see if there is a show on this week')
-
+@example('.ns YYYY/MM/DD, or simply .ns to see if there is a show on this week')
 
 def nextshow(sopel, input):
     """When is the next show?"""
@@ -239,12 +237,6 @@ def weekcheck2(sopel, t, generic):
                 return showmessage
 
     return showmessage
-
-
-
-#@nextshow.commands = ['nextshow', 'ns']
-#@nextshow.example = '.ns YYYY/MM/DD, or simply .ns to see if there is a show on this week'
-
 
 if __name__ == "__main__":
     print (__doc__.strip())
